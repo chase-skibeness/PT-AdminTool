@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PT-character-generator/static/css/main.facbca77.css",
+    "main.js": "/PT-character-generator/static/js/main.ff82a9c7.js",
+    "index.html": "/PT-character-generator/index.html",
+    "main.facbca77.css.map": "/PT-character-generator/static/css/main.facbca77.css.map",
+    "main.ff82a9c7.js.map": "/PT-character-generator/static/js/main.ff82a9c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.facbca77.css",
+    "static/js/main.ff82a9c7.js"
+  ]
+}
