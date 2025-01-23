@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PT-character-generator/static/css/main.e6c13ad2.css",
-    "main.js": "/PT-character-generator/static/js/main.432ab49e.js",
+    "main.js": "/PT-character-generator/static/js/main.5a8e24e6.js",
     "index.html": "/PT-character-generator/index.html",
     "main.e6c13ad2.css.map": "/PT-character-generator/static/css/main.e6c13ad2.css.map",
-    "main.432ab49e.js.map": "/PT-character-generator/static/js/main.432ab49e.js.map"
+    "main.5a8e24e6.js.map": "/PT-character-generator/static/js/main.5a8e24e6.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.432ab49e.js"
+    "static/js/main.5a8e24e6.js"
   ]
 }
