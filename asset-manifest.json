@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/PT-character-generator/static/css/main.e6c13ad2.css",
-    "main.js": "/PT-character-generator/static/js/main.41aa901c.js",
-    "index.html": "/PT-character-generator/index.html",
-    "main.e6c13ad2.css.map": "/PT-character-generator/static/css/main.e6c13ad2.css.map",
-    "main.41aa901c.js.map": "/PT-character-generator/static/js/main.41aa901c.js.map"
+    "main.css": "/PT-AdminTool/static/css/main.e6c13ad2.css",
+    "main.js": "/PT-AdminTool/static/js/main.52c1ccb0.js",
+    "index.html": "/PT-AdminTool/index.html",
+    "main.e6c13ad2.css.map": "/PT-AdminTool/static/css/main.e6c13ad2.css.map",
+    "main.52c1ccb0.js.map": "/PT-AdminTool/static/js/main.52c1ccb0.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.41aa901c.js"
+    "static/js/main.52c1ccb0.js"
   ]
 }
