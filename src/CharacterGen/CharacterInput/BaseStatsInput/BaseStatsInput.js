@@ -7,14 +7,17 @@ import {
   GridItem,
   IconButton,
 } from '@chakra-ui/react';
-import { Button } from 'ui/button';
-import { NumberInputField, NumberInputRoot } from 'ui/number-input';
-import { Field } from 'ui/field';
+import { Button } from 'shared/ChakraUI/button';
+import {
+  NumberInputField,
+  NumberInputRoot,
+} from 'shared/ChakraUI/number-input';
+import { Field } from 'shared/ChakraUI/field';
 import React from 'react';
 import { BsArrowClockwise } from 'react-icons/bs';
 
 const BaseStatsInput = ({ baseStats, setBaseStats, race }) => {
-  const racialBaseStats = race.baseStats;
+  const racialBaseStats = race?.baseStats;
 
   function getRandomBaseStat(stat) {
     return Math.floor(

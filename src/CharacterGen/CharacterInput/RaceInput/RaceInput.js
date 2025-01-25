@@ -14,7 +14,7 @@ import {
   SelectContent,
   SelectValueText,
   SelectItem,
-} from 'ui/select';
+} from 'shared/ChakraUI/select';
 import { BsArrowClockwise } from 'react-icons/bs';
 
 const races = racesData.races;
@@ -41,7 +41,7 @@ const RaceInput = ({ race, setRace }) => {
         <Group attached>
           <SelectRoot
             collection={raceCollection}
-            value={[race.name]}
+            value={[race?.name || '']}
             onValueChange={(e) => {
               setRace(races[e.value[0]]);
             }}
@@ -64,7 +64,7 @@ const RaceInput = ({ race, setRace }) => {
         </Group>
       </Card.Body>
       <Card.Footer>
-        <Text textStyle={'sm'}>{race.description}</Text>
+        <Text textStyle={'sm'}>{race?.description}</Text>
       </Card.Footer>
     </Card.Root>
   );

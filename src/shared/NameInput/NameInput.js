@@ -5,13 +5,13 @@ const NameInput = ({ name, setName }) => {
   return (
     <Card.Root minH="188px">
       <Card.Header>
-        <Heading>Character Name</Heading>
+        <Heading>Name</Heading>
       </Card.Header>
       <Card.Body>
         <Input
           id="nameInput"
           type="text"
-          value={name}
+          value={name || ''}
           onChange={(e) => setName(e.target.value)}
         />
       </Card.Body>

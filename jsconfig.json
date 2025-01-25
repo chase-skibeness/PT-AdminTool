@@ -5,9 +5,9 @@
     "skipLibCheck": true,
     "baseUrl": "src",
     "paths": {
-      "@/*": ["./src/*"],
-      "@ui/*": ["ui/*"],
-      "@data/*": ["data/*"]
+      "data/*": ["data/*"],
+      "shared/*": ["shared/*"]
     }
-  }
+  },
+  "include": ["src"]
 }

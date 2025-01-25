@@ -7,8 +7,11 @@ import {
   SelectContent,
   SelectValueText,
   SelectItem,
-} from 'ui/select';
-import { NumberInputField, NumberInputRoot } from 'ui/number-input';
+} from 'shared/ChakraUI/select';
+import {
+  NumberInputField,
+  NumberInputRoot,
+} from 'shared/ChakraUI/number-input';
 import { BsPlusCircle } from 'react-icons/bs';
 
 const classes = classesData.classes;
