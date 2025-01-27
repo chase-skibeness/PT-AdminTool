@@ -10,7 +10,7 @@ function App() {
   return (
     <Provider>
       <Container>
-        <Tabs.Root lazyMount unmountOnExit defaultValue="tab-1">
+        <Tabs.Root lazyMount unmountOnExit defaultValue="tab-2">
           <Tabs.List>
             <Tabs.Trigger value="tab-1">Character Generator</Tabs.Trigger>
             <Tabs.Trigger value="tab-2">Monster Creation Tool</Tabs.Trigger>

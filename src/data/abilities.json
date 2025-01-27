@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Spit Up",
+    "cost": 25,
+    "abilityPower": 40,
+    "attribute": "Water",
+    "accuracy": 85,
+    "formula": "User END * (1 + Ability Power/100) * (User END / Enemy MDF) * Attribute Interaction * Crit"
+  }
+]

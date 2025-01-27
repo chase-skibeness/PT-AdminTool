@@ -12,6 +12,8 @@ const CharacterCreatorInputForm = ({ characterInfo, setCharacterProperty }) => {
         <NameInput
           name={characterInfo.name}
           setName={(newName) => setCharacterProperty(newName, 'name')}
+          minH="188px"
+          nameOf={'Character'}
         />
       </GridItem>
       <GridItem>

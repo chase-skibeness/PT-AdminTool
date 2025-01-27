@@ -1,7 +1,7 @@
 {
   "name": "Slime",
   "behavior": "Aggressive",
-  "attribute": "Water",
+  "attribute": ["Water"],
   "naturalWeaponPower": 30,
   "baseStats": {
     "STR": 6,
@@ -25,14 +25,5 @@
     "LCK": 0.3,
     "ACC": 1
   },
-  "abilities": [
-    {
-      "name": "Spit Up",
-      "cost": 25,
-      "abilityPower": 40,
-      "attribute": "Water",
-      "accuracy": 85,
-      "formula": "User END * (1 + Ability Power/100) * (User END / Enemy MDF) * Attribute Interaction * Crit"
-    }
-  ]
+  "abilities": ["Spit Up"]
 }
