@@ -28,7 +28,7 @@ export const useCharacterInfo = () => {
     },
   });
 
-  const setProperty = (value, propertyPath) => {
+  const setProperty = (propertyPath, value) => {
     setCharacterInfo((prevInfo) => {
       const keys = propertyPath.split('.');
       const lastKey = keys.pop();

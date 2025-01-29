@@ -2,6 +2,7 @@ import { GridItem, SimpleGrid } from '@chakra-ui/react';
 import React from 'react';
 import NameInput from 'shared/NameInput/NameInput';
 import MonsterAttributeSelect from './MonsterAttributeSelect/MonsterAttributeSelect';
+import MonsterBaseStatsInput from './MonsterBaseStatsInput/MonsterBaseStatsInput';
 
 const MonsterCreatorInputForm = ({ monsterInfo, setMonsterProperty }) => {
   return (
@@ -9,13 +10,21 @@ const MonsterCreatorInputForm = ({ monsterInfo, setMonsterProperty }) => {
       <GridItem>
         <NameInput
           name={monsterInfo.name}
-          setName={(newName) => setMonsterProperty(newName, 'name')}
+          setName={(newName) => setMonsterProperty('name', newName)}
           nameOf={'Monster'}
         />
       </GridItem>
       <GridItem>
         <MonsterAttributeSelect
-          monsterInfo={monsterInfo}
+          monsterAttribute={monsterInfo.attribute}
+          setMonsterAttribute={(newAttribute) =>
+            setMonsterProperty('attribute', newAttribute)
+          }
+        />
+      </GridItem>
+      <GridItem>
+        <MonsterBaseStatsInput
+          monsterBaseStats={monsterInfo.baseStats}
           setMonsterProperty={setMonsterProperty}
         />
       </GridItem>

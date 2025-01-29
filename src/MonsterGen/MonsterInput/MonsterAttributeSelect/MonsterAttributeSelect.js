@@ -2,7 +2,7 @@ import { Card, Heading } from '@chakra-ui/react';
 import React from 'react';
 import AttributeSelect from 'shared/AttributeSelect/AttributeSelect';
 
-const MonsterAttributeSelect = ({ monsterInfo, setMonsterProperty }) => {
+const MonsterAttributeSelect = ({ monsterAttribute, setMonsterAttribute }) => {
   return (
     <Card.Root>
       <Card.Header>
@@ -10,10 +10,8 @@ const MonsterAttributeSelect = ({ monsterInfo, setMonsterProperty }) => {
       </Card.Header>
       <Card.Body>
         <AttributeSelect
-          attribute={monsterInfo.attribute}
-          setAttribute={(newAttribute) =>
-            setMonsterProperty(newAttribute, 'attribute')
-          }
+          attribute={monsterAttribute}
+          setAttribute={setMonsterAttribute}
         />
       </Card.Body>
     </Card.Root>

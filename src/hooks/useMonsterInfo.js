@@ -1,46 +1,48 @@
 import { useState } from 'react';
 
-export const useMonsterInfo = () => {
-  const [monsterInfo, setMonsterInfo] = useState({
-    name: null,
-    behavior: null,
-    attribute: null,
-    naturalWeaponPower: null,
-    baseStats: {
-      STR: null,
-      END: null,
-      DEF: null,
-      INT: null,
-      SPI: null,
-      MDF: null,
-      SPD: null,
-      LCK: null,
-      ACC: null,
+const baseMonsterTemplate = {
+  name: null,
+  behavior: null,
+  attribute: null,
+  naturalWeaponPower: null,
+  baseStats: {
+    STR: null,
+    END: null,
+    DEF: null,
+    INT: null,
+    SPI: null,
+    MDF: null,
+    SPD: null,
+    LCK: null,
+    ACC: null,
+  },
+  scalingMultipliers: {
+    STR: null,
+    END: null,
+    DEF: null,
+    INT: null,
+    SPI: null,
+    MDF: null,
+    SPD: null,
+    LCK: null,
+    ACC: null,
+  },
+  abilities: [
+    {
+      name: null,
+      cost: null,
+      abilityPower: null,
+      attribute: null,
+      accuracy: null,
+      formula: null,
     },
-    scalingMultipliers: {
-      STR: null,
-      END: null,
-      DEF: null,
-      INT: null,
-      SPI: null,
-      MDF: null,
-      SPD: null,
-      LCK: null,
-      ACC: null,
-    },
-    abilities: [
-      {
-        name: null,
-        cost: null,
-        abilityPower: null,
-        attribute: null,
-        accuracy: null,
-        formula: null,
-      },
-    ],
-  });
+  ],
+};
 
-  const setProperty = (value, propertyPath) => {
+export const useMonsterInfo = () => {
+  const [monsterInfo, setMonsterInfo] = useState(baseMonsterTemplate);
+
+  const setProperty = (propertyPath, value) => {
     setMonsterInfo((prevInfo) => {
       const keys = propertyPath.split('.');
       const lastKey = keys.pop();
@@ -52,8 +54,12 @@ export const useMonsterInfo = () => {
     });
   };
 
+  const resetMonsterInfo = () => {
+    setMonsterInfo(baseMonsterTemplate);
+  };
+
   const setAllProperties = (newMonsterInfo) => {
-    setMonsterInfo(newMonsterInfo);
+    newMonsterInfo ? setMonsterInfo(newMonsterInfo) : resetMonsterInfo();
   };
 
   return [monsterInfo, setProperty, setAllProperties];

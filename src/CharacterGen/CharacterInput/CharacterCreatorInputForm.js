@@ -11,7 +11,7 @@ const CharacterCreatorInputForm = ({ characterInfo, setCharacterProperty }) => {
       <GridItem>
         <NameInput
           name={characterInfo.name}
-          setName={(newName) => setCharacterProperty(newName, 'name')}
+          setName={(newName) => setCharacterProperty('name', newName)}
           minH="188px"
           nameOf={'Character'}
         />
@@ -19,14 +19,14 @@ const CharacterCreatorInputForm = ({ characterInfo, setCharacterProperty }) => {
       <GridItem>
         <RaceInput
           race={characterInfo.race}
-          setRace={(newRace) => setCharacterProperty(newRace, 'race')}
+          setRace={(newRace) => setCharacterProperty('race', newRace)}
         />
       </GridItem>
       <GridItem>
         <BaseStatsInput
           baseStats={characterInfo.baseStats}
           setBaseStats={(newBaseStats) =>
-            setCharacterProperty(newBaseStats, 'baseStats')
+            setCharacterProperty('baseStats', newBaseStats)
           }
           race={characterInfo.race}
         />
@@ -35,7 +35,7 @@ const CharacterCreatorInputForm = ({ characterInfo, setCharacterProperty }) => {
         <GrowthRatesInput
           growthRates={characterInfo.growthRates}
           setGrowthRates={(newGrowthRates) =>
-            setCharacterProperty(newGrowthRates, 'growthRates')
+            setCharacterProperty('growthRates', newGrowthRates)
           }
         />
       </GridItem>

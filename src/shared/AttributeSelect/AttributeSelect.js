@@ -88,8 +88,6 @@ const AttributeSelect = ({ attribute, setAttribute }) => {
         <SelectTrigger>
           <SelectValueText placeholder="--Choose Attribute--">
             {(items) => {
-              console.log(items);
-
               return (
                 <HStack>
                   {items.map((item) => {
