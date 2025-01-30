@@ -16,13 +16,13 @@
   },
   "scalingMultipliers": {
     "STR": 1,
-    "END": 2,
+    "END": 1.5,
     "DEF": 1.5,
     "INT": 0.5,
     "SPI": 1,
     "MDF": 1.5,
     "SPD": 0.5,
-    "LCK": 0.3,
+    "LCK": 0.5,
     "ACC": 1
   },
   "abilities": ["Spit Up"]

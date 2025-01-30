@@ -10,7 +10,7 @@ const MonsterBaseStatsInput = ({ monsterBaseStats, setMonsterProperty }) => {
         <Heading>Monster Base Stats</Heading>
       </Card.Header>
       <Card.Body>
-        <SimpleGrid columns={{ base: 1, sm: 3 }} gap={8}>
+        <SimpleGrid columns={{ base: 1, sm: 3 }} gap={3}>
           {Object.keys(monsterBaseStats).map((stat) => (
             <GridItem key={`Monster${stat}InputGridItemKey`}>
               <Field

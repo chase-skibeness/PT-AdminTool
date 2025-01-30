@@ -3,6 +3,7 @@ import React from 'react';
 import NameInput from 'shared/NameInput/NameInput';
 import MonsterAttributeSelect from './MonsterAttributeSelect/MonsterAttributeSelect';
 import MonsterBaseStatsInput from './MonsterBaseStatsInput/MonsterBaseStatsInput';
+import MonsterScalingMultipliersInput from './MonsterScalingMultipliersInput/MonsterScalingMultipliersInput';
 
 const MonsterCreatorInputForm = ({ monsterInfo, setMonsterProperty }) => {
   return (
@@ -22,6 +23,12 @@ const MonsterCreatorInputForm = ({ monsterInfo, setMonsterProperty }) => {
       </GridItem>
       <GridItem>
         <MonsterBaseStatsInput monsterBaseStats={monsterInfo.baseStats} setMonsterProperty={setMonsterProperty} />
+      </GridItem>
+      <GridItem>
+        <MonsterScalingMultipliersInput
+          scalingMultipliers={monsterInfo.scalingMultipliers}
+          setMonsterProperty={setMonsterProperty}
+        />
       </GridItem>
     </SimpleGrid>
   );
