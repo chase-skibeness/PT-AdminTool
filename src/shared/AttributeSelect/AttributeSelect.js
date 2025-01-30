@@ -1,20 +1,7 @@
 import React from 'react';
 import { createListCollection, Group, HStack, Icon } from '@chakra-ui/react';
-import {
-  SelectRoot,
-  SelectTrigger,
-  SelectContent,
-  SelectValueText,
-  SelectItem,
-} from 'shared/ChakraUI/select';
-import {
-  GiFire,
-  GiGroundSprout,
-  GiSun,
-  GiMoon,
-  GiWaterDrop,
-  GiWindyStripes,
-} from 'react-icons/gi';
+import { SelectRoot, SelectTrigger, SelectContent, SelectValueText, SelectItem } from 'shared/ChakraUI/select';
+import { GiFire, GiGroundSprout, GiSun, GiMoon, GiWaterDrop, GiWindyStripes } from 'react-icons/gi';
 
 const attributes = [
   {

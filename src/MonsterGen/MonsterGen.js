@@ -5,8 +5,7 @@ import MonsterCreatorInputForm from './MonsterInput/MonsterCreatorInputForm';
 import { useMonsterInfo } from 'hooks/useMonsterInfo';
 
 function MonsterGen() {
-  const [monsterInfo, setMonsterProperty, setAllMonsterProperties] =
-    useMonsterInfo();
+  const [monsterInfo, setMonsterProperty, setAllMonsterProperties] = useMonsterInfo();
 
   return (
     <Stack gap="8">
@@ -16,10 +15,7 @@ function MonsterGen() {
           <MonsterControls setAllMonsterProperties={setAllMonsterProperties} />
         </HStack>
       </Box>
-      <MonsterCreatorInputForm
-        monsterInfo={monsterInfo}
-        setMonsterProperty={setMonsterProperty}
-      />
+      <MonsterCreatorInputForm monsterInfo={monsterInfo} setMonsterProperty={setMonsterProperty} />
     </Stack>
   );
 }

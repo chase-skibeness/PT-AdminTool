@@ -9,12 +9,7 @@ const NameInput = ({ name, setName, ...props }) => {
         <Heading>{nameOf} Name</Heading>
       </Card.Header>
       <Card.Body>
-        <Input
-          id="nameInput"
-          type="text"
-          value={name || ''}
-          onChange={(e) => setName(e.target.value)}
-        />
+        <Input id="nameInput" type="text" value={name || ''} onChange={(e) => setName(e.target.value)} />
       </Card.Body>
     </Card.Root>
   );

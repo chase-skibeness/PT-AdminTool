@@ -22,9 +22,7 @@ const CharacterLevelView = ({ name, baseStats, growthRates }) => {
       let classMod = classDef.modifiers[statName];
       if (!classMod) classMod = 0;
 
-      const growth =
-        (growthRates[statName]?.calcGrowth(level) + stats[statName].overflow) *
-        (1 + classMod);
+      const growth = (growthRates[statName]?.calcGrowth(level) + stats[statName].overflow) * (1 + classMod);
 
       const overflow = growth % 1;
       return {
@@ -70,11 +68,7 @@ const CharacterLevelView = ({ name, baseStats, growthRates }) => {
         return {
           classDef: characterAtLevel.classDef,
           level: characterAtLevel.level,
-          stats: calculateStats(
-            characterAtLevel.level,
-            prevCharacterAtLevel.classDef,
-            prevCharacterAtLevel.stats
-          ),
+          stats: calculateStats(characterAtLevel.level, prevCharacterAtLevel.classDef, prevCharacterAtLevel.stats),
         };
       })
     );
@@ -90,11 +84,7 @@ const CharacterLevelView = ({ name, baseStats, growthRates }) => {
         </Heading>
       </Card.Header>
       <Card.Body>
-        <LevelsView
-          levelList={levelList}
-          addLevel={addLevel}
-          growthRates={growthRates}
-        />
+        <LevelsView levelList={levelList} addLevel={addLevel} growthRates={growthRates} />
       </Card.Body>
       <Card.Footer>
         <br />

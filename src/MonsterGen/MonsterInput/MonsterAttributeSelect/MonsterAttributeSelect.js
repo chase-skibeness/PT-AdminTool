@@ -9,10 +9,7 @@ const MonsterAttributeSelect = ({ monsterAttribute, setMonsterAttribute }) => {
         <Heading>Monster Attribute</Heading>
       </Card.Header>
       <Card.Body>
-        <AttributeSelect
-          attribute={monsterAttribute}
-          setAttribute={setMonsterAttribute}
-        />
+        <AttributeSelect attribute={monsterAttribute} setAttribute={setMonsterAttribute} />
       </Card.Body>
     </Card.Root>
   );

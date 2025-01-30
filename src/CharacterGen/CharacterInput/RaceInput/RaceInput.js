@@ -1,20 +1,7 @@
 import React from 'react';
 import racesData from 'data/races.json';
-import {
-  Card,
-  createListCollection,
-  Heading,
-  Group,
-  IconButton,
-  Text,
-} from '@chakra-ui/react';
-import {
-  SelectRoot,
-  SelectTrigger,
-  SelectContent,
-  SelectValueText,
-  SelectItem,
-} from 'shared/ChakraUI/select';
+import { Card, createListCollection, Heading, Group, IconButton, Text } from '@chakra-ui/react';
+import { SelectRoot, SelectTrigger, SelectContent, SelectValueText, SelectItem } from 'shared/ChakraUI/select';
 import { BsArrowClockwise } from 'react-icons/bs';
 
 const races = racesData.races;

@@ -1,17 +1,7 @@
-import {
-  Badge,
-  Card,
-  GridItem,
-  Group,
-  Heading,
-  SimpleGrid,
-} from '@chakra-ui/react';
+import { Badge, Card, GridItem, Group, Heading, SimpleGrid } from '@chakra-ui/react';
 import React from 'react';
 import { Field } from 'shared/ChakraUI/field';
-import {
-  NumberInputField,
-  NumberInputRoot,
-} from 'shared/ChakraUI/number-input';
+import { NumberInputField, NumberInputRoot } from 'shared/ChakraUI/number-input';
 
 const MonsterBaseStatsInput = ({ monsterBaseStats, setMonsterProperty }) => {
   return (
@@ -26,11 +16,7 @@ const MonsterBaseStatsInput = ({ monsterBaseStats, setMonsterProperty }) => {
               <Field
                 key={`Monster${stat}InputFieldKey`}
                 label={
-                  <Badge
-                    key={`${stat}LabelKey`}
-                    htmlFor={`Monster${stat}Input`}
-                    variant="surface"
-                  >
+                  <Badge key={`${stat}LabelKey`} htmlFor={`Monster${stat}Input`} variant="surface">
                     {stat}
                   </Badge>
                 }

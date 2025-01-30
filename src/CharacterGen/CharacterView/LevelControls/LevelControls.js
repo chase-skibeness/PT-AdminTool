@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
 import classesData from 'data/classes.json';
 import { Group, IconButton, createListCollection } from '@chakra-ui/react';
-import {
-  SelectRoot,
-  SelectTrigger,
-  SelectContent,
-  SelectValueText,
-  SelectItem,
-} from 'shared/ChakraUI/select';
-import {
-  NumberInputField,
-  NumberInputRoot,
-} from 'shared/ChakraUI/number-input';
+import { SelectRoot, SelectTrigger, SelectContent, SelectValueText, SelectItem } from 'shared/ChakraUI/select';
+import { NumberInputField, NumberInputRoot } from 'shared/ChakraUI/number-input';
 import { BsPlusCircle } from 'react-icons/bs';
 
 const classes = classesData.classes;
@@ -40,9 +31,7 @@ const LevelControls = ({ levelList, addLevel }) => {
 
   function noStats() {
     const characterAtLevel = levelList.findLast(() => true);
-    return Object.keys(characterAtLevel.stats).includes(
-      (stat) => characterAtLevel.stats[stat].value === null
-    );
+    return Object.keys(characterAtLevel.stats).includes((stat) => characterAtLevel.stats[stat].value === null);
   }
 
   return (
@@ -62,10 +51,7 @@ const LevelControls = ({ levelList, addLevel }) => {
           {classCollection.items.map((classOption) => {
             if (isEligibleForClass(classes[classOption?.value]))
               return (
-                <SelectItem
-                  item={classOption}
-                  key={classOption?.value + Math.random()}
-                >
+                <SelectItem item={classOption} key={classOption?.value + Math.random()}>
                   {classOption?.label}
                 </SelectItem>
               );

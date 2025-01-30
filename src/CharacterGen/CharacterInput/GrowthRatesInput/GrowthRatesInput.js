@@ -1,22 +1,7 @@
-import {
-  Group,
-  Card,
-  Heading,
-  SimpleGrid,
-  GridItem,
-  Badge,
-  IconButton,
-  createListCollection,
-} from '@chakra-ui/react';
+import { Group, Card, Heading, SimpleGrid, GridItem, Badge, IconButton, createListCollection } from '@chakra-ui/react';
 import { Button } from 'shared/ChakraUI/button';
 import { Field } from 'shared/ChakraUI/field';
-import {
-  SelectRoot,
-  SelectTrigger,
-  SelectContent,
-  SelectValueText,
-  SelectItem,
-} from 'shared/ChakraUI/select';
+import { SelectRoot, SelectTrigger, SelectContent, SelectValueText, SelectItem } from 'shared/ChakraUI/select';
 import { BsArrowClockwise } from 'react-icons/bs';
 import React from 'react';
 
@@ -126,11 +111,7 @@ const GrowthRatesInput = ({ growthRates, setGrowthRates }) => {
             <GridItem>
               <Field
                 label={
-                  <Badge
-                    key={`${statName}InputLabelKey`}
-                    htmlFor={`${statName}Input`}
-                    variant="surface"
-                  >
+                  <Badge key={`${statName}InputLabelKey`} htmlFor={`${statName}Input`} variant="surface">
                     {statName}
                   </Badge>
                 }
@@ -151,19 +132,13 @@ const GrowthRatesInput = ({ growthRates, setGrowthRates }) => {
                     </SelectTrigger>
                     <SelectContent>
                       {growthRateCollection.items.map((growthRateOption) => (
-                        <SelectItem
-                          item={growthRateOption}
-                          key={growthRateOption.value}
-                        >
+                        <SelectItem item={growthRateOption} key={growthRateOption.value}>
                           {growthRateOption.label}
                         </SelectItem>
                       ))}
                     </SelectContent>
                   </SelectRoot>
-                  <IconButton
-                    key={`${statName}Generator`}
-                    onClick={() => generateGrowthRate(statName)}
-                  >
+                  <IconButton key={`${statName}Generator`} onClick={() => generateGrowthRate(statName)}>
                     <BsArrowClockwise />
                   </IconButton>
                 </Group>

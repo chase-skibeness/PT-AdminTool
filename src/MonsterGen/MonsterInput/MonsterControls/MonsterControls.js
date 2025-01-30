@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
-import {
-  SelectRoot,
-  SelectTrigger,
-  SelectContent,
-  SelectValueText,
-  SelectItem,
-} from 'shared/ChakraUI/select';
+import { SelectRoot, SelectTrigger, SelectContent, SelectValueText, SelectItem } from 'shared/ChakraUI/select';
 import { createListCollection } from '@chakra-ui/react';
 import monsterCompData from 'data/monster-compendium.json';
 
@@ -34,9 +28,7 @@ function MonsterControls({ setAllMonsterProperties }) {
 
   function handleMonsterChange(monsterIndex) {
     setSelectedMonsterIndex(monsterIndex ?? -1);
-    monsterIndex >= 0
-      ? fetchMonsterData(monsterCompData[monsterIndex].file)
-      : setAllMonsterProperties(null);
+    monsterIndex >= 0 ? fetchMonsterData(monsterCompData[monsterIndex].file) : setAllMonsterProperties(null);
   }
 
   return (

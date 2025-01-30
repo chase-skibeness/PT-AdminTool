@@ -1,17 +1,6 @@
-import {
-  Badge,
-  Card,
-  Group,
-  Heading,
-  SimpleGrid,
-  GridItem,
-  IconButton,
-} from '@chakra-ui/react';
+import { Badge, Card, Group, Heading, SimpleGrid, GridItem, IconButton } from '@chakra-ui/react';
 import { Button } from 'shared/ChakraUI/button';
-import {
-  NumberInputField,
-  NumberInputRoot,
-} from 'shared/ChakraUI/number-input';
+import { NumberInputField, NumberInputRoot } from 'shared/ChakraUI/number-input';
 import { Field } from 'shared/ChakraUI/field';
 import React from 'react';
 import { BsArrowClockwise } from 'react-icons/bs';
@@ -21,9 +10,7 @@ const BaseStatsInput = ({ baseStats, setBaseStats, race }) => {
 
   function getRandomBaseStat(stat) {
     return Math.floor(
-      Math.random() *
-        (racialBaseStats[stat].max - racialBaseStats[stat].min + 1) +
-        racialBaseStats[stat].min
+      Math.random() * (racialBaseStats[stat].max - racialBaseStats[stat].min + 1) + racialBaseStats[stat].min
     );
   }
 
@@ -65,11 +52,7 @@ const BaseStatsInput = ({ baseStats, setBaseStats, race }) => {
             <GridItem>
               <Field
                 label={
-                  <Badge
-                    key={`${stat}LabelKey`}
-                    htmlFor={`${stat}Input`}
-                    variant="surface"
-                  >
+                  <Badge key={`${stat}LabelKey`} htmlFor={`${stat}Input`} variant="surface">
                     {stat}
                   </Badge>
                 }
@@ -86,18 +69,10 @@ const BaseStatsInput = ({ baseStats, setBaseStats, race }) => {
                     key={`${stat}InputKey`}
                   >
                     <NumberInputField
-                      placeholder={
-                        racialBaseStats
-                          ? `${racialBaseStats[stat].min} - ${racialBaseStats[stat].max}`
-                          : ''
-                      }
+                      placeholder={racialBaseStats ? `${racialBaseStats[stat].min} - ${racialBaseStats[stat].max}` : ''}
                     />
                   </NumberInputRoot>
-                  <IconButton
-                    key={`${stat}Generator`}
-                    onClick={() => generateStat(stat)}
-                    disabled={race === ''}
-                  >
+                  <IconButton key={`${stat}Generator`} onClick={() => generateStat(stat)} disabled={race === ''}>
                     <BsArrowClockwise />
                   </IconButton>
                 </Group>

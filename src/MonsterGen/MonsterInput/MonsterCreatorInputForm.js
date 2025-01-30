@@ -17,16 +17,11 @@ const MonsterCreatorInputForm = ({ monsterInfo, setMonsterProperty }) => {
       <GridItem>
         <MonsterAttributeSelect
           monsterAttribute={monsterInfo.attribute}
-          setMonsterAttribute={(newAttribute) =>
-            setMonsterProperty('attribute', newAttribute)
-          }
+          setMonsterAttribute={(newAttribute) => setMonsterProperty('attribute', newAttribute)}
         />
       </GridItem>
       <GridItem>
-        <MonsterBaseStatsInput
-          monsterBaseStats={monsterInfo.baseStats}
-          setMonsterProperty={setMonsterProperty}
-        />
+        <MonsterBaseStatsInput monsterBaseStats={monsterInfo.baseStats} setMonsterProperty={setMonsterProperty} />
       </GridItem>
     </SimpleGrid>
   );

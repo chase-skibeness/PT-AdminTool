@@ -3,17 +3,7 @@ import { Table, Highlight } from '@chakra-ui/react';
 import LevelControls from '../LevelControls/LevelControls';
 import { ActionBarRoot, ActionBarContent } from 'shared/ChakraUI/action-bar';
 
-const statList = [
-  'STR',
-  'END',
-  'DEF',
-  'INT',
-  'SPI',
-  'MDF',
-  'SPD',
-  'LCK',
-  'ACC',
-];
+const statList = ['STR', 'END', 'DEF', 'INT', 'SPI', 'MDF', 'SPD', 'LCK', 'ACC'];
 
 const LevelsView = ({ levelList, addLevel, growthRates }) => {
   function getStatColor(characterAtLevel, checkedStat) {
@@ -59,10 +49,7 @@ const LevelsView = ({ levelList, addLevel, growthRates }) => {
               <Table.Cell>{characterAtLevel.level}</Table.Cell>
               <Table.Cell>{characterAtLevel.classDef?.name}</Table.Cell>
               {statList.map((stat) => (
-                <Table.Cell
-                  key={`${characterAtLevel.level}${stat}Cellkey`}
-                  textAlign={'center'}
-                >
+                <Table.Cell key={`${characterAtLevel.level}${stat}Cellkey`} textAlign={'center'}>
                   <Highlight
                     query={`${characterAtLevel.stats[stat].value}`}
                     styles={getStatColor(characterAtLevel, stat)}

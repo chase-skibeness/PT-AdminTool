@@ -12,10 +12,7 @@ function CharacterGen() {
       <Box mt="4">
         <Heading size="3xl">Project Township Character Generator</Heading>
       </Box>
-      <CharacterCreatorInputForm
-        characterInfo={characterInfo}
-        setCharacterProperty={setCharacterProperty}
-      />
+      <CharacterCreatorInputForm characterInfo={characterInfo} setCharacterProperty={setCharacterProperty} />
       <CharacterLevelView
         name={characterInfo.name}
         baseStats={characterInfo.baseStats}

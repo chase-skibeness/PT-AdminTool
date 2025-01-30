@@ -15,9 +15,7 @@ function App() {
             <Tabs.Trigger value="tab-1">Character Generator</Tabs.Trigger>
             <Tabs.Trigger value="tab-2">Monster Creation Tool</Tabs.Trigger>
             <Tabs.Trigger value="tab-3">Ability Creation Tool</Tabs.Trigger>
-            {isLocal ? (
-              <Tabs.Trigger>Running in Local Mode</Tabs.Trigger>
-            ) : null}
+            {isLocal ? <Tabs.Trigger>Running in Local Mode</Tabs.Trigger> : null}
           </Tabs.List>
           <Tabs.Content value="tab-1">
             <CharacterGen />
